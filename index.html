@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from ersy.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Mar 2025 09:32:17 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles4cc8.css?v=28">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="icon" href="profil.jpg">
+    <script src="../code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>ersy</title>
+</head>
+<body>
+
+    <div class="card-main">
+        <div class="banner-gif">
+            <img src="banner.gif" alt="banner">
+        </div>
+
+        <div class="profil-photo">
+            <img src="profil.jpg" alt="">
+        </div>
+        <div class="name">ersy</div>
+        <div class="description">Live alone, die alone.</div>
+        <div id="copyAlert">Kopyalandı</div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/q.ersy/" class="fab fa-instagram" target="_blank"></a>
+            <a href="https://www.youtube.com/channel/UCbJTplIROxGNcRMu-qRMRrQ" class="fab fa-youtube" target="_blank"></a>
+            <a href="https://open.spotify.com/user/x9xlhgy9ge53vj2m5l9n9fsq6?si=fe2e94b9072c450b" class="fab fa-spotify" target="_blank"></a>
+            <a href="https://steamcommunity.com/id/xquerss/" target="_blank" class="fab fa-steam"></a>
+            <a href="cdn-cgi/l/email-protection.html#751c1b131a351007060c5b111003" class="fa-solid fa-envelope"></a>
+            <button id="copydiscord" value="ersyy" onclick="copy()"><a href="#" class="fab fa-discord"></a></button>
+        </div>
+
+        <div class="main-spotify">
+            <img src="spotify.jpg" class="song-image" alt="">
+            <div class="song-name-area">
+                <p class="song-name font-extra-bold">not listening</p>
+                <p class="song-author">unknown</p>
+                <div class="song-duration-area">
+                    <span class="song-progress font-light">0:00</span>
+                    <input class="song-range" disabled="" type="range" value="0" min="0" max="100">
+                    <span class="song-duration font-light">0:00</span>
+                </div>
+            </div>
+            
+        </div>
+        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/songapi204b.js?v=155"></script>
+    </div>
+
+    <script>
+        const cp = document.getElementById('copydiscord');
+        const cop = document.getElementById('copyAlert');
+        cp.addEventListener('click', (event) => {
+            cop.style.visibility = "visible";
+            cop.style.transition = "0.5s all"
+            navigator.clipboard.writeText(cp.value);
+            var seconds = 0;
+            var Interval;
+            clearInterval(Interval);
+            Interval = setInterval(startTimer, 1000);
+
+            function startTimer() {
+                seconds++;
+                if(seconds <= 5){
+                 clearInterval(Interval);
+                 seconds = 0;
+                 cop.style.visibility = "hidden";
+                 cop.style.transition = "0.5s all"
+                }
+            }
+
+        })
+    </script>
+
+
+</body>
+
+<!-- Mirrored from ersy.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Mar 2025 09:32:20 GMT -->
+</html>
